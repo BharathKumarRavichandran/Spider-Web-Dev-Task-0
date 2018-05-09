@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Speed Count</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+	<h1>WORD SPEED COUNT</h1>
+	<div id="insHead">Instructions:</div>
+	<div id="ins">Type the paragraph below in the input space provided. Type it out as fast as you can with accuracy. Your typing speed(wpm) will be displayed at the end. Click start to start the game.</div>
+	<button id="start" onclick="startTimer();">Start</button>
+	<div id="timerText"></div>
+	<div id="paraHead">Paragraph to be typed:</div>
+	<div id="para">What if the depraved stress ate the belt? Did the probable telephone really announce the notice?</div>
+	<input id="input" disabled type="text" name="words" value="Type the above text!" onfocus="this.value=''" oninput="wordCheck()">
+	<div id="timeDisplay">Time Taken: <span id="timeDisplaySpan"></span></div>
+	<div id="speedDisplay">Your speed: <span id="speedDisplaySpan"></span></div>
+<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
