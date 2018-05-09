@@ -56,9 +56,7 @@ function wordCheck(){
 }*/
 
 function wordCheck(){
-  document.addEventListener('keyup',function(event){
-          alert(text[i]+"  "+input.value);    
-          console.log(i);
+          //alert(text[i]+"  "+input.value);    
           if(input.value == text[i]){
             i++;
             input.value="";
@@ -70,5 +68,4 @@ function wordCheck(){
             acc = false;
 
           }
-      }, false);
 }      
