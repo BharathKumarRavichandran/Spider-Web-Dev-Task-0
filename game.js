@@ -61,31 +61,7 @@ function startTimer(){
     }
   }, 1000);
 }
-/*
-function wordCheck(){
-	document.addEventListener('keyup',function(event){
-          alert(String.fromCharCode(event.keyCode)+"  "+text[i]);    
-				if(String.fromCharCode(event.keyCode) == text[i]){ //r keyCode
-					alert("Hello");
-          i++;
-				}
-			}, false);
-}*/
-/*
-function wordCheck(){
-          //alert(text[i]+"  "+input.value);    
-          if(input.value == text[i]){
-            i++;
-            input.value="";
-            input.style.backgroundColor = "green";
-          }
-          else{
-            input.style.backgroundColor = "red";
-            input.value="";
-            acc = false;
-
-          }
-}*/      
+    
 function wordCheck(){ 
           if(i==0){
             d1 = new Date();
@@ -97,14 +73,12 @@ function wordCheck(){
           t=t2-t1;// Time taken in milliseconds
           timeDisplaySpan.innerHTML = t/1000+" seconds";
           
-          if(input.value == text[i]){
+          if(input.value[i] == text[i]){
             i++;
-            input.value="";
             test.style.backgroundColor = "green";
           }
           else{
             test.style.backgroundColor = "red";
-            input.value="";
           }
           if(i==len-1){
             d2 = new Date();
