@@ -15,6 +15,8 @@ stButton.style.marginLeft = (w-40)+'px';
 speedDisplay.style.marginLeft = (w-130)+'px';
 timeDisplay.style.marginLeft = (w-130)+'px';
 var i=0;
+var n=1;
+var acc=true;
 var input = document.getElementById("input");
 var text = new Array();
 text = document.getElementById("para").innerHTML;
@@ -22,7 +24,6 @@ text = document.getElementById("para").innerHTML;
 
 function startTimer(){
   var counter = 4; 
-  alert(text);
   setInterval(function() {
     counter--;
     if (counter >= 1) {
@@ -43,11 +44,31 @@ function startTimer(){
     timeDisplaySpan.innerHTML = date.getTime()-d1;
   }, 1000);
 }
-
+/*
 function wordCheck(){
-	document.addEventListener('keydown',function(event){
-				if(Sring.fromCharCode(event.keyCode) == text[i]){ //r keyCode
+	document.addEventListener('keyup',function(event){
+          alert(String.fromCharCode(event.keyCode)+"  "+text[i]);    
+				if(String.fromCharCode(event.keyCode) == text[i]){ //r keyCode
 					alert("Hello");
+          i++;
 				}
 			}, false);
-}
+}*/
+
+function wordCheck(){
+  document.addEventListener('keyup',function(event){
+          alert(text[i]+"  "+input.value);    
+          console.log(i);
+          if(input.value == text[i]){
+            i++;
+            input.value="";
+            input.style.backgroundColor = "green";
+          }
+          else{
+            input.style.backgroundColor = "red";
+            input.value="";
+            acc = false;
+
+          }
+      }, false);
+}      
