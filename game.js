@@ -4,7 +4,6 @@ var d1;
 var d2;
 var i=0;
 var len=0;//Paragraph's length by letter
-var n;//No. of words in the paragraph
 var t=0;
 var t1;
 var t2;
@@ -31,14 +30,9 @@ timeDisplay.style.marginLeft = (w-130)+'px';
 text = sentences[Math.floor(Math.random()*14)];
 document.getElementById("para").innerHTML = text;
 
-function wordCount(str) { //Function to count the no. of words in the paragraph.
-  return str.split(" ").length;
-}
-
 function startTimer(){
   counter = 4;
   len = text.length; 
-  n= wordCount(text);
   
   setInterval(function() {
     counter--;
@@ -78,13 +72,13 @@ function wordCheck(){
             test.style.backgroundColor = "green";
           }
           else{
-            test.style.backgroundColor = "red";
+            test.style.backgroundColor = "darkred";
           }
-          if(i==len-1){
+          if(i==len){
             d2 = new Date();
             t2 = d2.getTime();
             t=t2-t1;// Time taken in milliseconds
-            speedDisplaySpan.innerHTML = Math.round(n*1000*60/t)+" wpm";
+            speedDisplaySpan.innerHTML = (Math.round((len*1000/t)*10))/10;
             test.style.backgroundColor = "blue";
             input.disabled=true;
             input.value="Successfully completed!";
