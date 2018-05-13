@@ -3,9 +3,13 @@ body{
 	position: relative;
 } 
 
+img:alt{
+	color: white;
+}
+
 #tb{
 	color: darkred;
-	font-size: 40px;
+	font-size: 2.5em;
 	font-weight: 100;
 	padding-top: 30px;
 	padding-bottom: 50px;
@@ -13,11 +17,6 @@ body{
 
 a{
 	text-decoration: none;
-}
-
-#title{
-	padding-top: 40px;
-	padding-left: 250px;
 }
 
 #avatar{
@@ -30,7 +29,7 @@ a{
 	padding: 25px;
 	color: white;
 	font-weight: 900;
-	font-size: 40px;
+	font-size: 2.5em;
 	letter-spacing: 0.2em;
 }
 
@@ -72,8 +71,8 @@ a{
 
 .contactLinks{
 	color: blue;
-	font-size: 25px;
-	padding: 30px;
+	font-size: 1.56em;
+	padding: 2%;
 }
 
 .contactLinks:visited{
@@ -85,4 +84,39 @@ footer{
 	letter-spacing: 0.1em;
 	text-align: left;
 	font-weight: 800;
+}
+
+@media only screen and (max-width: 500px){
+	#tb{
+		font-size: 2em;
+		font-weight: 100;
+	}
+
+	.stitle{
+		font-size: 2em;
+	}
+
+	#thoughts{
+		height: 70vh;
+	}
+
+	#skills{
+		height: 40vh;
+	}
+
+	#projects{
+		height: 50vh;
+    }
+
+    #contact{
+    	height: 40vh;
+    }
+
+    .content{
+    	font-size: 1.15em;
+    }
+
+    footer{
+    	font-size: 0.8em;
+    }
 }
