@@ -3,23 +3,16 @@ body{
 	position: relative;
 } 
 
-header{
-	display: inline-block;
-}
-
-
 #tb{
 	color: darkred;
 	font-size: 40px;
 	font-weight: 100;
-	opacity: 1;
-	letter-spacing: 0em;
 	padding-top: 30px;
 	padding-bottom: 50px;
 }
 
-ul {
-    list-style-type: none;
+a{
+	text-decoration: none;
 }
 
 #title{
@@ -36,11 +29,11 @@ ul {
 }
 
 .stitle{
+	padding: 25px;
 	color: white;
 	font-weight: 900;
 	font-size: 40px;
 	letter-spacing: 0.2em;
-	margin-bottom: 30px;
 }
 
 #about{
@@ -52,38 +45,31 @@ ul {
 }
 
 #thoughts,#skills,#projects{
-	padding-top: 250px;
 	text-align: center;
 	width: 100vw;
-	height: 100vh;
+	height: 50vh;
 	opacity: 0.9;
+}
+
+#projects{
+	height: 75vh;
 }
 
 #contact{
-	padding-top: 250px;
+	padding-top: 20px;
 	text-align: center;
 	width: 100vw;
-	height: 90vh;
+	height: 55vh;
 	opacity: 0.9;
-}
-
-.flex-container{
-	display: flex;
-	flex-direction: row;
 }
 
 .content{
 	text-align: center;
 	color: green;
 	letter-spacing: 0.2em;
-}
-
-#topmenu{
-	color: blue;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    box-shadow: none;
+	font-size: 1.4em;
+	margin-left: 7%;
+	margin-right: 7%;
 }
 
 .fa{
@@ -98,14 +84,15 @@ ul {
 }
 
 #avatar{
-	height: 250px;
+	height: 220px;
 	width: 200px;
-	border-radius: 50%;
+	border-radius: 10%;
 }
 
 .fa:hover {
 	color: white;
     opacity: 0.9;
+    transform: scale(1.2);
 }
 
 .fa-facebook {
